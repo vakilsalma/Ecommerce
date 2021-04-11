@@ -39,7 +39,7 @@ export class InventoryComponent implements OnInit {
 
   
 addtocart(Id,cartquantity){
-  if(this.dataservice.products[Id].quantity<cartquantity || this.dataservice.products[Id].quantity<=0){
+  if(this.dataservice.products[Id].quantity<cartquantity || this.dataservice.products[Id].quantity<=0 || cartquantity<=0){
     alert("Item out of stock!");
   }
   else if(this.present(Id)==Id){
