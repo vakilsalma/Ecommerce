@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-title" style="display: flex;justify-content: space-between;"><h3>Cart</h3 ><h3>Items: {{this.dataservice.prodcount()}}</h3 ><h3>Total:{{this.dataservice.gettotal() | currency}}</h3></div>
+<table class="table">
+<thead>
+<tr>
+<th scope="col">Image</th>
+<th scope="col">Product</th>
+<th scope="col">Qty</th>
+<th scope="col">Price</th>
+<th scope="col">Remove</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let item of cartitems">
+<td><img src="{{item.image}}" style="width: 2.5rem;"></td>
+<td>{{item.name}}</td>
+<td>{{item.quantity}}</td>
+<td>{{item.price | currency}}</td>
+<td><button class='btn btn-danger desk' (click)="remove(item.id,item.prod_id)">Remove</button>
+    <button class='btn btn-danger mob' (click)="remove(item.id,item.prod_id)">X</button></td></tr>
+
+</tbody>
+</table>
+</div>

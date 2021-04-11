@@ -1,0 +1,27 @@
+<h3 style="padding: 2vw;">Deals of the Day</h3>
+    <div class="card-title productdiv" >
+              <div class="row">
+                  <div class="col-md-3" *ngFor="let product of products">
+                      <center>
+                         
+                <div class='card prodcard'>
+                    <div class="card-img">
+                        <img class='card-img-top prodimg' src='{{product.image}}' alt='Card image cap'>
+                    </div>
+                    <div class="card-body productbody">
+                            <h3 class="productname" style="color:gray">{{product.name}} <span style="font-size: 20px;">{{product.price | currency}}</span></h3>
+                            <p >{{product.desc}}</p>
+                            <p style="color:red">Hurry! Only {{product.quantity}} left.</p>
+                            <input type="number" #cartquantity value={{product.quantity}} style="width: 100%;">
+                            <button class='btn btn-primary' (click)="addtocart(product.id,cartquantity.value)" style="width: 100%;">Add to Cart</button>
+                    </div></div>
+                    </center>
+                </div> 
+                
+
+            </div>
+            </div>
+
+
+
+
