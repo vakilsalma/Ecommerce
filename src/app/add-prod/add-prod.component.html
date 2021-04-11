@@ -1,6 +1,6 @@
 <div class="card ">
     <div class="card-title"><h3>Add Products</h3></div>
-<form #addProd = "ngForm" >
+<form #addProd = "ngForm" (ngSubmit)="add_prod(addProd,addProd.value)" ngNativeValidate>
 <div class="form-group">
 <label for="exampleInputEmail1">Product</label>
 <input type="text" class="form-control" name="name" placeholder="Product Name" required ngModel>
@@ -32,7 +32,7 @@
 </div>
 <div class="col-md-6">
 <div class="form-group">
-<button type="submit" (click)="add_prod(addProd,addProd.value)" class="btn btn-primary" style="margin-top:1.7vw;float: right; width: 100%;">Add</button>
+<button type="submit" class="btn btn-primary" style="margin-top:1.7vw;float: right; width: 100%;">Add</button>
 </div>
 </div>
 </div>
