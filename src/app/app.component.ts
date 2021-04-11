@@ -13,10 +13,3 @@ export class AppComponent{
   }
     
   }
-  
-  // product_pass:any;
-  // prod_pass_method($event){
-  //   this.product_pass = $event;
-  // }
-
-
