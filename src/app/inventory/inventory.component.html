@@ -10,7 +10,7 @@
                     </div>
                     <div class="card-body productbody">
                             <h3 class="productname" style="color:gray">{{product.name}} <span style="font-size: 20px;">{{product.price | currency}}</span></h3>
-                            <p >{{product.desc}}</p>
+                            <p style="height: 5.8vh;">{{product.desc}}</p>
                             <p style="color:red">Hurry! Only {{product.quantity}} left.</p>
                             <input type="number" #cartquantity value={{product.quantity}} style="width: 100%;">
                             <button class='btn btn-primary' (click)="addtocart(product.id,cartquantity.value)" style="width: 100%;">Add to Cart</button>
